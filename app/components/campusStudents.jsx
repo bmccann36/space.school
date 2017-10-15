@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class campusStudents extends Component {
+export default class CampusStudents extends Component {
   constructor() {
     super()
     this.state = { students:[] }

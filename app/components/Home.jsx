@@ -1,32 +1,43 @@
-
-
 import React, { Component } from 'react';
+
+import CampusTable from './CampusTable'
+
 let campuses = ['luna', 'terra', 'mars', 'titan']
 
 export default class Home extends Component{
   constructor(){
     super()
-    this.state= {
-      selectedCampus: {}
+    this.state = {
+      selectedCampus: {},
+      showStudents: false
     }
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(){
+    // console.log(ev.target)
+    this.setState({showStudents: true})
+    console.log(this.showStudents)
   }
 
   render(){
   return (
    <div>
    <h1> home page</h1>
-     <div className="campus-wrapper"
-     onClick={()=>console.log('click') }>
+     <div className="campus-wrapper">
       {campuses.map(campus => {
         return(
-         <div>
-           <div className= "campus" >
+           <div className= "campus"  onClick={this.handleClick} >
              <h2> campus </h2>
              <img src="https://d2ujflorbtfzji.cloudfront.net/key-image/c3c498a4-261b-4928-b282-48ea4ed12b12.png"/>
            </div>
-         </div>
        )}
       )}
+   </div>
+   <div className= "campus-table-wrapper">
+     { this.state.showStudents &&
+       <CampusTable />
+     }
    </div>
  </div>
   )
