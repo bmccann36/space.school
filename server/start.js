@@ -23,7 +23,7 @@ module.exports = app
 
 if (module === require.main) {
   // Start listening only if we're the main module.
-
+// console.log(module.id)
   /*
     https://nodejs.org/api/modules.html#modules_accessing_the_main_module
       - This (module === require.main) will be true if run via node foo.js, but false if run by require('./foo')
