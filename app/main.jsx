@@ -7,10 +7,10 @@ import { HashRouter, Route, Link } from 'react-router-dom';
 
 import store from './store'
 import Root from './components/Root'
-import Students from './components/Students'
+import StudentsHome from './components/StudentsHome'
 import Home from './components/Home'
 
-render (
+render(
   <Provider store={store}>
     <HashRouter>
       <div className= "main">
@@ -23,8 +23,8 @@ render (
             </div>
           </nav>
         <div className = "body">
-          <Route exact path='/' component={Home} />
-          <Route exact path='/students' component={Students} />
+           <Route exact path='/' component={Home} />
+          <Route exact path='/students' component={StudentsHome} />
         </div>
       </div>
      </HashRouter>

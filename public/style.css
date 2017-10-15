@@ -1,13 +1,16 @@
 .body {
-  display: flex;
 }
 
+/* container around the campuses home view */
+.campus-wrapper {
+  display: flex;
+  max-width: 50%;
+}
 
 .campus {
-  margin: 1em;
   flex: 2;
-  padding: 2em;
   background-color: #C1B5AD;
+  margin: 2em;
 }
 
  h2 {
@@ -16,12 +19,23 @@
   font-weight: normal;
 }
 
-.students {
+/* just the student table */
+.students-table {
   background-color: greenyellow;
   padding: 2em;
   margin: 4em;
   flex: 2;
-  max-width: 40%;
 }
 
+/* wrapper around Students Home */
+.students-container {
+display: flex;
+}
+
+/* form for adding people */
+.add-person {
+  flex: 1;
+  max-width: 30%;
+  background-color: lightblue
+}
 
