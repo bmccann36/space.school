@@ -10,11 +10,10 @@ export default function home (){
         <ul>
          {campuses.map(campus => {
            return(
-            <div >
-              <Link to='/students'>{ campus }>
-                <img src="https://d2ujflorbtfzji.cloudfront.net/key-image/c3c498a4-261b-4928-b282-48ea4ed12b12.png" />
-              </Link>
-              </div>
+          <div className="campus">
+            <h2> campus </h2>
+                  <img src="https://d2ujflorbtfzji.cloudfront.net/key-image/c3c498a4-261b-4928-b282-48ea4ed12b12.png" />
+        </div>
              )
          }
          )}

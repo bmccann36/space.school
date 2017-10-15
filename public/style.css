@@ -1,0 +1,27 @@
+.body {
+  display: flex;
+}
+
+
+.campus {
+  margin: 1em;
+  flex: 2;
+  padding: 2em;
+  background-color: #C1B5AD;
+}
+
+ h2 {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.students {
+  background-color: greenyellow;
+  padding: 2em;
+  margin: 4em;
+  flex: 2;
+  max-width: 40%;
+}
+
+
