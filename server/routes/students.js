@@ -38,7 +38,7 @@ router.get('/:studentId', (req, res, next) => {
 
 // POST add new student
 router.post('/add',  (req, res, next) => {
-  console.log(req.body.email)
+  console.log(req.body)
   Student.create({
       name: req.body.name,
       email: req.body.email,
@@ -51,12 +51,8 @@ router.post('/add',  (req, res, next) => {
 
 // delete a student
 router.delete('/:studentId/delete', (req, res, next) =>{
-  console.log(req.body.name)
-  Student.findOne({
-    where: {
-      name: req.body.name
-    }
-  })
+  console.log(req.params.studentId)
+  Student.findById(req.params.studentId)
   .then( student =>  {
      res.send(student.destroy())
   })

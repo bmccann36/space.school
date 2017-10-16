@@ -15,10 +15,11 @@ export default class Home extends Component{
   }
 
   handleClick(){
-    // console.log(ev.target)
     this.setState({showStudents: true})
-    console.log(this.showStudents)
+
   }
+
+
 
   render(){
   return (
@@ -27,7 +28,7 @@ export default class Home extends Component{
      <div className="campus-wrapper">
       {campuses.map(campus => {
         return(
-           <div className= "campus"  onClick={this.handleClick} >
+           <div className= "campus"  onClick={this.handleClick}>
              <h2> campus </h2>
              <img src="https://d2ujflorbtfzji.cloudfront.net/key-image/c3c498a4-261b-4928-b282-48ea4ed12b12.png"/>
            </div>
@@ -35,9 +36,7 @@ export default class Home extends Component{
       )}
    </div>
    <div className= "campus-table-wrapper">
-     { this.state.showStudents &&
        <CampusTable />
-     }
    </div>
  </div>
   )
