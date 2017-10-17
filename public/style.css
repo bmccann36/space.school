@@ -1,23 +1,35 @@
-.body {
-}
 
-/* container around the campuses home view */
-.campus-wrapper {
+
+.campus-container {
+  background-color: goldenrod;
+  max-width: 70%;
   display: flex;
-  max-width: 50%;
 }
 
-.campus {
+.campuses {
+  flex: 3;
+  background-color: green;
+  margin: 1em;
+}
+
+.student-list {
+  background-color: rebeccapurple;
+  margin: 1em;
+}
+
+.student-list-container {
+  flex: 2;
+  background-color: grey;
+  margin: 1em;
+}
+
+/* .campus {
   flex: 2;
   background-color: #C1B5AD;
   margin: 2em;
-}
+} */
 
- h2 {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-weight: normal;
-}
+
 
 /* just the student table */
 .students-table {

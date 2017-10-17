@@ -2,7 +2,7 @@
 import React from 'react'
 import {render} from 'react-dom'
 import { Provider } from 'react-redux'
-import { HashRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import store from './store'
 
 import Root from './components/Root'
@@ -18,13 +18,13 @@ import Home from './components/Home'
 
 render(
   <Provider store={store}>
-    <HashRouter>
+    <BrowserRouter>
       <div className= "main">
           <Route path='/' component={Nav} />
           <Route path= '/' component={CampusContainer} />
           <Route exact path='/students' component={StudentsHome} />
       </div>
-     </HashRouter>
+     </BrowserRouter>
   </Provider>,
   document.getElementById('main')
 )
